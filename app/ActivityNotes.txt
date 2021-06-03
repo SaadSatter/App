@@ -1,0 +1,12 @@
+Acitivity Notes:
+    Activity are different pages in app
+    -Passing data using Intents
+    -To launch Activity,
+        Intent i = new Intent(Context, targetActivity.class);
+        //Context is an object that represents activity to be launched from.
+            //MainActivity is a context and therefore you can use "this" key word
+        startActivity(i);
+    -To create a new activity file
+        1. Go to com.example.PROJECT_NAME //the one that holds the main activity
+        2. Right click on that folder and add new Activity //you can specify empty activity
+        3. Name the activity
