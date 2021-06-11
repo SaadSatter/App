@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App_2">
-        <activity android:name=".NFC_Info"></activity>
+        <activity
+            android:name=".NFC_INFO2"
+            android:label="@string/title_activity_n_f_c__i_n_f_o2"
+            android:theme="@style/Theme.App_2.NoActionBar"></activity>
+        <activity android:name=".NFC_Info" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
