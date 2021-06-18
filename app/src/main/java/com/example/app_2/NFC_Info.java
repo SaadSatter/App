@@ -16,7 +16,7 @@ public class NFC_Info extends AppCompatActivity {
         setContentView(R.layout.activity_nfc_info);
     }
     public void Back_NFC_Dectector (View V){
-        Intent newIntent = new Intent(this, MainActivity.class);
+        Intent newIntent = new Intent(this, graph_trial2.class);
         startActivity(newIntent);
     }
 }
