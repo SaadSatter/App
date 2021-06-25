@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.App_2">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".graph_trial2"></activity>
         <activity
             android:name=".TrialHeader2"

@@ -39,7 +39,7 @@ public class NFC_Info extends AppCompatActivity {
     }
 
     public void Back_NFC_Dectector (View V){
-        Intent newIntent = new Intent(this, graph_trial2.class);
+        Intent newIntent = new Intent(this, MainActivity.class);
         startActivity(newIntent);
     }
 }
