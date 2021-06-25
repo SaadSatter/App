@@ -1,11 +1,12 @@
 package com.example.app_2;
 
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
@@ -15,15 +16,16 @@ import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
 import java.util.ArrayList;
 
-public class graph_trial2 extends AppCompatActivity {
+
+public class ph_graph_fragment extends Fragment {
+
     private LineChart test1;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_graph_trial2);
-        test1 = (LineChart) findViewById(R.id.linechart);
-//        test1.setOnChartGestureListener(GraphTest.this);
-//        test1.setOnChartValueSelectedListener(GraphTest.this);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_ph_graph_fragment, container, false);
+        test1 = (LineChart) view.findViewById(R.id.linechart);
         test1.setDragEnabled(true);
         test1.setScaleEnabled(false);
 
@@ -48,8 +50,7 @@ public class graph_trial2 extends AppCompatActivity {
         LineData data = new LineData(datasets);
         test1.setData(data);
         test1.invalidate();
-
+        return view;
+        //return inflater.inflate(R.layout.fragment_ph_graph_fragment, container, false);
     }
-
-
 }
