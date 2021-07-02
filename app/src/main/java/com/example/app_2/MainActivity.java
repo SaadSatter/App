@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
         //Initialise NfcAdapter
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
         //If no NfcAdapter, display that the device has no NFC
-        if (nfcAdapter == null){
+        /*if (nfcAdapter == null){
             Toast.makeText(this,"NO NFC Capabilities",
                     Toast.LENGTH_SHORT).show();
             finish();
-        }
+        }*/
         //Create a PendingIntent object so the Android system can
         //populate it with the details of the tag when it is scanned.
         //PendingIntent.getActivity(Context,requestcode(identifier for
@@ -37,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
         pendingIntent = PendingIntent.getActivity(this,0,new Intent(this,this.getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),0);
     }
 
+    public void NFC_Dectector (View V){
+        Intent newIntent = new Intent(this, NFC_Info.class);
+        startActivity(newIntent);
+    }
+
+/*
     @Override
     protected void onResume() {
         super.onResume();
@@ -73,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent1);
         }
     }
-
+*/
     private String detectTagData(Tag tag) {
         StringBuilder sb = new StringBuilder();
         byte[] id = tag.getId();
