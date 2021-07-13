@@ -26,6 +26,7 @@ public class NFC_Info extends AppCompatActivity {
         FragmentManager fm2 = getSupportFragmentManager();
         FragmentTransaction ft2 = fm2.beginTransaction(); //using transaction, replace fragment to fragment_1
         ft2.replace(R.id.moistureFragment, fragment2);
+
         ft2.commit();    //whenever transaction begins, needs to be committed
 
         //Temperature Fragment
