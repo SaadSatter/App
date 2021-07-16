@@ -3,7 +3,11 @@
     package="com.example.app_2">
 
     <uses-permission android:name="android.permission.NFC" />
-    <uses-feature android:name="android.hardware.nfc" android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".graph_trial2"></activity>
+        <activity android:name=".tempGraph"></activity>
+        <activity android:name=".moistureGraph" />
+        <activity android:name=".pHGraph" />
+        <activity android:name=".graph_trial2" />
         <activity
             android:name=".TrialHeader2"
             android:label="@string/title_activity_trial_header2"
@@ -20,10 +27,11 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
-                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
             </intent-filter>
         </activity>
     </application>

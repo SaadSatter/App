@@ -21,17 +21,15 @@ import com.github.mikephil.charting.listener.OnChartGestureListener;
 import java.util.ArrayList;
 
 
-public class ph_graph_fragment extends Fragment {
+public class temp_graph_fragment extends Fragment {
 
-    private LineChart test1;
+    private LineChart test3;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ph_graph_fragment, container, false);
-        test1 = (LineChart) view.findViewById(R.id.linechart);
-        //test1.setTouchEnabled(true);
-        //view.onClickListen
+        test3 = (LineChart) view.findViewById(R.id.linechart);
         OnChartGestureListener listener = new OnChartGestureListener() {
             @Override
             public void onChartGestureStart(MotionEvent me, ChartTouchListener.ChartGesture lastPerformedGesture) {
@@ -75,9 +73,9 @@ public class ph_graph_fragment extends Fragment {
             }
         };
         //listener.onChartSingleTapped();
-        test1.setOnChartGestureListener(listener);
-        test1.setDragEnabled(true);
-        test1.setScaleEnabled(false);
+        test3.setOnChartGestureListener(listener);
+        test3.setDragEnabled(true);
+        test3.setScaleEnabled(false);
 
         ArrayList<Entry> yValues = new ArrayList<>();
 //        for (int i = 0; i < 50; i++){
@@ -98,8 +96,8 @@ public class ph_graph_fragment extends Fragment {
         datasets.add(set1);
 
         LineData data = new LineData(datasets);
-        test1.setData(data);
-        test1.invalidate();
+        test3.setData(data);
+        test3.invalidate();
         return view;
         //return inflater.inflate(R.layout.fragment_ph_graph_fragment, container, false);
     }

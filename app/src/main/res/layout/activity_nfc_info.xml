@@ -23,10 +23,10 @@
             app:backgroundTint="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.991"
+            app:layout_constraintHorizontal_bias="0.993"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.687" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar2"
@@ -202,36 +202,47 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <fragment
+            android:id="@+id/moistureFragment"
+            android:name="com.example.app_2.fragment_moisture_graph"
+            android:layout_width="match_parent"
+            android:layout_height="143dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline5"
+            app:layout_constraintVertical_bias="1.0"></fragment>
+
+        <fragment
+            android:id="@+id/tempFragment"
+            android:name="com.example.app_2.temp_graph_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="143dp"
+            app:layout_constraintBottom_toTopOf="@+id/phFragment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline3"
+            app:layout_constraintVertical_bias="0.476"></fragment>
+
+        <fragment
             android:id="@+id/phFragment"
             android:name="com.example.app_2.ph_graph_fragment"
-            android:layout_width="405dp"
+            android:layout_width="match_parent"
             android:layout_height="143dp"
             app:layout_constraintBottom_toTopOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline3"
-            app:layout_constraintVertical_bias="0.245"></fragment>
+            app:layout_constraintVertical_bias="1.0"></fragment>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.7" />
-
-        <!--<TextView
-            android:id="@+id/textView13"
-            android:layout_width="392dp"
-            android:layout_height="52dp"
-            android:layout_marginBottom="29dp"
-            android:text="What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-            app:layout_constraintBottom_toTopOf="@+id/button2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.473"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phFragment"
-            app:layout_constraintVertical_bias="1.0" />-->
+            app:layout_constraintGuide_percent="0.76" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/gradient_red"
+        android:onClick="NFC_Dectector"
         android:text="Check NFC"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"

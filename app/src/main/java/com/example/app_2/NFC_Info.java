@@ -20,6 +20,24 @@ public class NFC_Info extends AppCompatActivity {
     }
 
     public void changeFragment(View view){
+        //Moisture Fragment
+        Fragment fragment2;
+        fragment2 = new fragment_moisture_graph();
+        FragmentManager fm2 = getSupportFragmentManager();
+        FragmentTransaction ft2 = fm2.beginTransaction(); //using transaction, replace fragment to fragment_1
+        ft2.replace(R.id.moistureFragment, fragment2);
+
+        ft2.commit();    //whenever transaction begins, needs to be committed
+
+        //Temperature Fragment
+        Fragment fragment3;
+        fragment3 = new temp_graph_fragment();
+        FragmentManager fm3 = getSupportFragmentManager();
+        FragmentTransaction ft3 = fm3.beginTransaction();
+        ft3.replace(R.id.tempFragment, fragment3);
+        ft3.commit();
+
+        //pH Fragment
         Fragment fragment;
         //if(view == view.findViewById(R.id.button)){
         fragment = new ph_graph_fragment();
@@ -27,14 +45,7 @@ public class NFC_Info extends AppCompatActivity {
         FragmentTransaction ft = fm.beginTransaction(); //using transaction, replace fragment to fragment_1
         ft.replace(R.id.phFragment, fragment);
         ft.commit();    //whenever transaction begins, needs to be committed
-        //}
-        /*if (view == view.findViewById(R.id.button2)){
-            fragment = new fragment_2();
-            FragmentManager fm = getParentFragmentManager();
-            FragmentTransaction ft = fm.beginTransaction(); //using transaction, replace fragment to fragment_1
-            ft.replace(R.id.fragment_place, fragment);
-            ft.commit();
-        }*/
+
 
     }
 
