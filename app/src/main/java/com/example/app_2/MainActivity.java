@@ -62,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void resolveIntent(Intent intent) {
         String action = intent.getAction();
-        if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(action)
+        if (
+                NfcAdapter.ACTION_TAG_DISCOVERED.equals(action)
                 || NfcAdapter.ACTION_TECH_DISCOVERED.equals(action)
                 || NfcAdapter.ACTION_NDEF_DISCOVERED.equals(action)) {
             Tag tag = (Tag) intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
