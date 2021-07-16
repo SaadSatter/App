@@ -15,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".pHGraph"></activity>
+        <activity android:name=".tempGraph"></activity>
+        <activity android:name=".moistureGraph" />
+        <activity android:name=".pHGraph" />
         <activity android:name=".graph_trial2" />
         <activity
             android:name=".TrialHeader2"

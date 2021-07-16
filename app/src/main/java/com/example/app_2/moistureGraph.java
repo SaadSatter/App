@@ -2,30 +2,23 @@ package com.example.app_2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
-import com.github.mikephil.charting.listener.ChartTouchListener;
-import com.github.mikephil.charting.listener.OnChartGestureListener;
 
 import java.util.ArrayList;
 
-public class pHGraph extends AppCompatActivity {
+public class moistureGraph extends AppCompatActivity {
 
     private LineChart test1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_phgraph);
+        setContentView(R.layout.activity_moisture_graph);
         test1 = (LineChart) findViewById(R.id.linechart);
 //        test1.setOnChartGestureListener(GraphTest.this);
 //        test1.setOnChartValueSelectedListener(GraphTest.this);
